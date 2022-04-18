@@ -19,8 +19,9 @@
     "url": "https://github.com/modfy/eslint-config/issues"
   },
   "homepage": "https://github.com/modfy/eslint-config#readme",
-  "devDependencies": {
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-prettier-standard": "^4.0.1",
     "eslint-config-react-app": "^7.0.0",
@@ -38,6 +39,6 @@
     "eslint-plugin-standard": "^5.0.0"
   },
   "peerDependencies": {
-     "eslint": ">= 7"
+    "eslint": ">= 7"
   }
 }
