@@ -1,58 +1,58 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true,
-    "worker": true
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    worker: true,
   },
-  "extends": [
+  extends: [
     "react-app",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "prettier-standard"
+    "prettier-standard",
   ],
-  "plugins": [
+  plugins: [
     "react",
     "@typescript-eslint",
     "react-hooks",
     "prettier",
-    "simple-import-sort"
+    "simple-import-sort",
   ],
-  "globals": {
-    "JSX": true
+  globals: {
+    JSX: true,
   },
-  "rules": {
+  rules: {
     "no-use-before-define": "off",
     "no-unused-vars": [
       "error",
       {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_"
-      }
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
     ],
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_"
-      }
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
     ],
     "prettier/prettier": [
       "error",
       {
-        "endOfLine": "auto"
-      }
+        endOfLine: "auto",
+      },
     ],
     "simple-import-sort/exports": "error",
-
+    "react/react-in-jsx-scope": "off",
     "simple-import-sort/imports": [
       "error",
       {
-        "groups": [
+        groups: [
           // Node.js builtins. You could also generate this regex if you use a `.js` config.
           // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
           [
-            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
+            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
           ],
           // Packages
           ["^\\w"],
@@ -65,16 +65,16 @@ module.exports = {
           // Other relative imports. Put same-folder imports and `.` last.
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
           // Style imports.
-          ["^.+\\.s?css$"]
-        ]
-      }
+          ["^.+\\.s?css$"],
+        ],
+      },
     ],
     "import/no-anonymous-default-export": [
       "error",
       {
-        "allowArrowFunction": true,
-        "allowAnonymousFunction": true
-      }
-    ]
-  }
-}
+        allowArrowFunction: true,
+        allowAnonymousFunction: true,
+      },
+    ],
+  },
+};
